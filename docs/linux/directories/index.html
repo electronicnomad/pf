@@ -471,7 +471,7 @@
   
     <li class="md-nav__item">
       <a href="../shell/" class="md-nav__link">
-        shell 쉘
+        쉘
       </a>
     </li>
   
@@ -522,21 +522,28 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    /
+    루트 디렉토리
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    . 그리고 ..
+    현재 디렉토리와 상위 디렉토리
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#home-directory" class="md-nav__link">
-    home directory
+  <a href="#_5" class="md-nav__link">
+    홈 디렉토리
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    상대경로와 절대경로
   </a>
   
 </li>
@@ -547,7 +554,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     관련 명령어들
   </a>
   
@@ -923,21 +930,28 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    /
+    루트 디렉토리
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    . 그리고 ..
+    현재 디렉토리와 상위 디렉토리
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#home-directory" class="md-nav__link">
-    home directory
+  <a href="#_5" class="md-nav__link">
+    홈 디렉토리
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    상대경로와 절대경로
   </a>
   
 </li>
@@ -948,7 +962,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     관련 명령어들
   </a>
   
@@ -1005,14 +1019,14 @@
 그래서 디렉토리 아래에 디렉토리 아래에 디렉토리를 만들 수 있어 계층구조가 형성됩니다.
 최상위 디렉토리는 루트 디렉토리(root directory)라고 부르며, / (슬래시) 로 표기합니다.</p>
 <h2 id="_2">기본 사항<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">/<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_3">루트 디렉토리<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>최상위 디렉토리를 루트 디렉트로 root directory라고 부릅니다. 표기는 앞서 이야기 한 것과 같이
 / 라고 적고, 슬래시 slash라고 읽습니다.</p>
 <p>/ 는 디렉토리의 시작을 의미합니다.
 앞서 설명한 것과 같이 root directory는 / 로 표기되며
 root directory 아래에 위치하는 디렉토리는 /usr 과 같이 표기할 수 있습니다.
 만약 /usr 아래에 또 다른 디렉토리, bin 이 존재한다면, /usr/bin 이렇게 표기할 수 있습니다.</p>
-<h3 id="_4">. 그리고 ..<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h3 id="_4">현재 디렉토리와 상위 디렉토리<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>디렉토리를 표기하거나 기능적으로 지칭하는 방식 중에 . 과 .. 이 있습니다.
 . 은 현재 디렉토리를 의미하고 .. 은 상위 디렉토리를 의미합니다.
 아래의 예제를 보겠습니다.</p>
@@ -1036,15 +1050,62 @@ $
 
 <p>/usr/local 디렉토리에서 <code>ls -al</code> 명령을 수행한 결과입니다.
 그 중 . 과 .. 이 보일 것입니다. 모든 디렉토리에서 . 와 .. 은 조회됩니다.</p>
-<h3 id="home-directory">home directory<a class="headerlink" href="#home-directory" title="Permanent link">&para;</a></h3>
-<p>사용자의 공간을 홈 디렉토리 home directory라고 합니다.
+<h3 id="_5">홈 디렉토리<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>사용자의 공간을 home directory 홈 디렉토리 라고 합니다.
 변수로는 $HOME 이라고 정의합니다.
 사용자의 홈 디렉토리의 위치는 <code>/etc/passwd</code> 파일에 정의됩니다.<br />
 <code>$ cat /etc/passwd | grep $USER</code>로 현재 사용자의
 설정을 확인해 봅니다. 그리고,
 <code>echo $HOME</code>이라고 명령 내려봅니다. 출력되는 결과가 지금 로그인한
 사용자의 홈 디렉토리입니다.</p>
-<h2 id="_5">관련 명령어들<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>홈 디렉토리로 이동하는 방법이 몇 가지 있습니다.</p>
+<ol>
+<li>직접 자신의 홈 디렉토리를 입력한다.<br />
+<code>cd /home/ubuntu</code></li>
+<li>환경 변수를 활용한다.<br />
+<code>cd $HOME</code></li>
+<li>다음과 같이 간단히 한다.<br />
+<code>cd ~</code></li>
+</ol>
+<p>UNIX/Linux에서 <code>~</code>는 사용자의 홈 디렉토리를 뜻 합니다.</p>
+<h3 id="_6">상대경로와 절대경로<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>디렉토리의 위치에 접근하는 방식을 경로라고 하거나, 디렉토리의 위치 자체를 경로라고
+설명하는 사람도 있습니다. 실제 우리가 사용하는 '경로'라는 단어는 經路라는 것으로
+'지나는 길'이라는 뜻을 담고 있습니다.</p>
+<p>UNIX/Linux에는 <code>$PATH</code>라는 변수가 있고, <code>$PATH</code>는 디렉토리의 위치를 지시합니다.
+이 PATH를 번한문서에서는 '경로'라고 번역한 것으로 보입니다. 다음의 예제를 보겠습니다.</p>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">pwd</span>
+/home/pi
+$ ls -al ../../usr/local
+total <span class="m">40</span>
+drwxr-xr-x <span class="m">10</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 .
+drwxr-xr-x <span class="m">11</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:58 ..
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 bin
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 etc
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 games
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 include
+drwxr-xr-x  <span class="m">5</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">13</span>:00 lib
+lrwxrwxrwx  <span class="m">1</span> root root    <span class="m">9</span> Jan <span class="m">11</span> <span class="m">12</span>:50 man -&gt; share/man
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 sbin
+drwxr-xr-x  <span class="m">7</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">13</span>:00 share
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 src
+$ ls -al /usr/local
+total <span class="m">40</span>
+drwxr-xr-x <span class="m">10</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 .
+drwxr-xr-x <span class="m">11</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:58 ..
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 bin
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 etc
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 games
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 include
+drwxr-xr-x  <span class="m">5</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">13</span>:00 lib
+lrwxrwxrwx  <span class="m">1</span> root root    <span class="m">9</span> Jan <span class="m">11</span> <span class="m">12</span>:50 man -&gt; share/man
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 sbin
+drwxr-xr-x  <span class="m">7</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">13</span>:00 share
+drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 src
+$
+</code></pre></div>
+
+<h2 id="_7">관련 명령어들<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <h3 id="cd-change-directory">cd - change directory<a class="headerlink" href="#cd-change-directory" title="Permanent link">&para;</a></h3>
 <p>명령어 중에, <code>cd</code>가 있습니다.
 디렉토리를 변경할 때 사용합니다. 용례는, <code>cd /var/log</code>와 같이
@@ -1069,7 +1130,7 @@ $
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-02-23T14:46:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-02-23</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-02-24T19:34:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-02-24</span>
     
   </small>
 </div>
@@ -1101,7 +1162,7 @@ $
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                shell 쉘
+                쉘
               </div>
             </div>
           </a>

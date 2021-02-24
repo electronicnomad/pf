@@ -14,7 +14,7 @@
     
     
       
-        <title>shell 쉘 - Plumbers' Friday</title>
+        <title>쉘 - Plumbers' Friday</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shell" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              shell 쉘
+              쉘
             
           </span>
         </div>
@@ -478,9 +478,52 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          쉘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        shell 쉘
+        쉘
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    초기화 파일
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    환경 변수
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    쉘 프로그래밍
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -817,6 +860,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    초기화 파일
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    환경 변수
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    쉘 프로그래밍
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -832,10 +904,26 @@
                   </a>
                 
                 
-                <h1 id="shell">shell 쉘<a class="headerlink" href="#shell" title="Permanent link">&para;</a></h1>
-<p>쉘은 일종의 사용자 인터페이스이다. 
-사용자는 쉘을 통해서 Linux와 그리고 하드웨어와 대화를 할 수 있다.</p>
-<p>Windows 시스템에서 Explorer.exe도 쉘이다.</p>
+                <h1 id="_1">쉘<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>shell</p>
+</blockquote>
+<p>쉘은 일종의 사용자 인터페이스입니다.
+사용자는 쉘을 통해서 운영체제와 대화를 하게 됩니다.</p>
+<p>우리가 사용하는 컴퓨터는 하드웨어가 있고, 그 위에 운영체제가 동작하는 구조입니다.
+운영체제에서 하드웨어에 가장 가까운 것이 kernel 커널이라는 존재가 있으며,
+그 상위에 devices 디바이스나 기타 library 라이브러리나 명령어들이 존재하게 됩니다.
+그리고 shell 쉘이 있는데, 이 쉘을 통해서 사람은 컴퓨터와 정보를 주고받게 됩니다.</p>
+<p>Linux에서는 현재 <code>bash</code>이 가장 보편적이며 <code>tcsh</code>과 <code>csh</code> 그리고 <code>zsh</code>도
+인기가 있는 것으로 알고 있습니다. 제가 전산을 배울 때는 <code>sh</code> 혹은 <code>csh</code>
+그리고 제가 가장 좋아했던 <code>ksh</code>이 보편적이었습니다.</p>
+<p>제가 <code>ksh</code>을 좋아하고, 현재 <code>bash</code>에 불만이 없는 이유는 <code>set -o vi</code> 옵션을
+적용해서 쉘 프롬프트에서 vi 편집기와 같은 입력 명령어를 편집할 수 있기 때문입니다.</p>
+<p>Windows 시스템에서 Explorer.exe도 쉘입니다.<br />
+사람과 가장 가까이 있는 소프트웨어로 만들어진 컴퓨터 인터페이스가 쉘이라고 정의해도 대부분 틀리지 않습니다.</p>
+<h2 id="_2">초기화 파일<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">환경 변수<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">쉘 프로그래밍<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
                 
                   
                     
@@ -844,7 +932,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-02-23T14:46:58+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-02-23</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-02-24T19:34:51+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-02-24</span>
     
   </small>
 </div>
