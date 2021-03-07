@@ -555,6 +555,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    쉘 초기 설정
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -979,6 +986,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    쉘 초기 설정
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1094,7 +1108,8 @@ ubuntu@node1:~$
 시스템에 부정하게 침입하려는 자들에게 불필요한 정보를 제공한다는 사유로
 <code># cat /dev/null &gt; /etc/issue</code>라는 명령을 root 루트 사용자가 입력함으로써,
 0 byte 바이트 파일로 만들기도 했습니다.</p>
-<p>요즈음처럼, ssh/sshd를 이용하여 host 호스트에 접근하는 경우 로그인 프롬프트를
+<p>요즈음처럼, rlogind와 telnetd가 배제되고 ssh/sshd를 이용하여
+원격 host 호스트에 접근하는 경우 로그인 프롬프트를
 볼 기회조차 없어서 거의 용도가 폐기 상태에 가깝다 할 수 있습니다.</p>
 <h4 id="etcissuenet">/etc/issue.net<a class="headerlink" href="#etcissuenet" title="Permanent link">&para;</a></h4>
 <p>지금 이 글을 읽는 분께서 터미널을 열어 자신이 로그인할 수 있는 UNIX/Linux 머신에서
@@ -1126,20 +1141,30 @@ OS의 버전이나 패치 레벨을 알리는 것에 머물기도 했습니다.<
 전환하는 경우는 거의 없기 때문에 UNIX나 Linux의 프롬프트는 <code>$</code>로
 통일되어 표현하는 것이 요즈음의 쓰임입니다.</p>
 <p>루트 사용자에 관한 이야기는 따로 다루도록 하겠습니다.</p>
+<h2 id="_4">쉘 초기 설정<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>사용자가 로그인을 성공적으로 마치면, 위에서 설명한 쉘 프롬프트가 화면에 나타나기 직전에
+자동적으로 수행되는 일이 사용자의 쉘 환경에 따른 여러 정의를 읽어 들이는 것입니다.
+이런 정의들은 shell initialization files 쉘 초기화<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 파일들에 수록되게 됩니다.</p>
+<p>이 쉘 초기화 파일들을 활용하여 사용자는 터미널에서의 작업환경을 자신의 구미에 맞게
+변경하여 작업 효율을 높일 수도 있고, 특정 소프트웨어가 요구하는 조건을 맞춰 낼 수도 있게 됩니다.</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
 <p>접근이라는 방식에 원격 접속과 직접 장치에 연결된 키보드 마우스 모니터를
-사용하는 방법, 두 가지 모두를 의미하겠다. 전자(前者) 경우에는
-사용할 수 있는 방식이 <code>telnet</code>, <code>ssh</code>, <code>ftp</code>, <code>sftp</code> 등이 있겠다.
-이 중에서 <code>telnet</code>, <code>ftp</code>는 보안의 문제로 거의 사용하지 않는다.
-후자(後者)의 경우는 여러분이 익숙한 윈도나 맥 컴퓨터를 사용하는 것과
-다름이 없다.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+  사용하는 방법, 두 가지 모두를 의미하겠다. 전자(前者) 경우에는
+  사용할 수 있는 방식이 <code>rlogin</code>, <code>telnet</code>, <code>ssh</code>, <code>ftp</code>, <code>sftp</code> 등이 있습니다.
+  이 중에서 <code>rlogin</code>, <code>telnet</code>, <code>ftp</code>는 보안의 문제로 이제는 사용하지 않는 것이 상식이 되었습니다.
+  후자(後者)의 경우는 여러분이 익숙한 윈도나 맥 컴퓨터를 사용하는 것과
+  다름이 없습니다.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:2">
-<p>당시 네트워크를 통한 접근이라고 해 봐야, telnet과 rlogin이 전부였다. 하지만,
-후기 UNIX에서는 ssh를 통해 접근하였을 때에도 해당 파일을 읽어들여 출력하는 경우도 있었다.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p>당시 네트워크를 통한 접근이라고 해 봐야, telnet과 rlogin이 전부였습니다. 하지만,
+  후기 UNIX에서는 ssh를 통해 접근하였을 때에도 해당 파일을 읽어들여 출력하는 경우도 있었습니다.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>initialization과 초기화(初期化)는 서로 의미하는 바가 같지는 않지만,
+이와 같이 널리 번역되는 것을 존중하여 초기화라는 표현을 사용합니다.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1151,7 +1176,7 @@ OS의 버전이나 패치 레벨을 알리는 것에 머물기도 했습니다.<
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-06T17:53:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-06</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-07T14:32:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-07</span>
     
   </small>
 </div>
