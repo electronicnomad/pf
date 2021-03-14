@@ -566,6 +566,53 @@
     쉘 초기 설정
   </a>
   
+    <nav class="md-nav" aria-label="쉘 초기 설정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-wide-initialization-files" class="md-nav__link">
+    전역 설정 파일 System wide initialization files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-initialization-files" class="md-nav__link">
+    사용자 설정 파일 user initialization files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout 로그아웃
+  </a>
+  
+    <nav class="md-nav" aria-label="logout 로그아웃">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logout_1" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -997,6 +1044,53 @@
     쉘 초기 설정
   </a>
   
+    <nav class="md-nav" aria-label="쉘 초기 설정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-wide-initialization-files" class="md-nav__link">
+    전역 설정 파일 System wide initialization files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-initialization-files" class="md-nav__link">
+    사용자 설정 파일 user initialization files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logout" class="md-nav__link">
+    logout 로그아웃
+  </a>
+  
+    <nav class="md-nav" aria-label="logout 로그아웃">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logout_1" class="md-nav__link">
+    logout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1153,6 +1247,150 @@ OS의 버전이나 패치 레벨을 알리는 것에 머물기도 했습니다.<
 이런 정의들은 shell initialization files 쉘 초기화<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> 파일들에 수록되게 됩니다.</p>
 <p>이 쉘 초기화 파일들을 활용하여 사용자는 터미널에서의 작업환경을 자신의 구미에 맞게
 변경하여 작업 효율을 높일 수도 있고, 특정 소프트웨어가 요구하는 조건을 맞춰 낼 수도 있게 됩니다.</p>
+<p>이런 초기화 설정은 system wide 전역 설정 파일이 존재하고,
+개별 사용자가 정의하는 것이 존재합니다.
+먼저 사용자가 로그인을 하게 되면 전역 설정이 먼저 적용되고, 후차적으로
+개별 사용자의 정의가 적용됩니다.</p>
+<p>아래에서부터는 대표적인 사용자 쉘인, <code>bash</code>를 기준으로 설명합니다.</p>
+<h3 id="system-wide-initialization-files">전역 설정 파일 System wide initialization files<a class="headerlink" href="#system-wide-initialization-files" title="Permanent link">&para;</a></h3>
+<p>system wide 전역(全域)이라는 단어 그대로 여기에 수록된 정의는
+시스템에 접근하는 모든 <code>bash</code> 쉘이 기본인 사용자에게 적용됩니다.
+system administrator 시스템 관리자가 강제할 수 있는 조건들을
+손쉽게 적용할 수 있습니다. 아래의 설명은 <code>bash</code>, <code>ksh</code>, 그리고 <code>ash</code>에 공통됩니다.
+다른 쉘일 경우에는 다른 파일에 정의가 있습니다.
+이를 알기 위해서는 각 쉘의 맨 페이지를 참조하는 것도 방법일 수 있습니다.</p>
+<p>시스템 기본값은 다음의 파일들이 정의를 가지고 있습니다.
+<code>/etc/profile</code>
+그리고 이 파일의 내용을 보면, 무엇을 더 읽어 들이는지 알 수 있습니다.</p>
+<div class="codehilite"><pre><span></span><code>:/etc $ cat ./profile
+<span class="c1"># /etc/profile: system-wide .profile file for the Bourne shell (sh(1))</span>
+<span class="c1"># and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;`id -u`&quot;</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+<span class="k">else</span>
+  <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games&quot;</span>
+<span class="k">fi</span>
+<span class="nb">export</span> PATH
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">PS1</span><span class="p">-</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">BASH</span><span class="p">-</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$BASH</span><span class="s2">&quot;</span> !<span class="o">=</span> <span class="s2">&quot;/bin/sh&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="c1"># The file bash.bashrc already sets the default PS1.</span>
+    <span class="c1"># PS1=&#39;\h:\w\$ &#39;</span>
+    <span class="k">if</span> <span class="o">[</span> -f /etc/bash.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      . /etc/bash.bashrc
+    <span class="k">fi</span>
+  <span class="k">else</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;`id -u`&quot;</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      <span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;# &#39;</span>
+    <span class="k">else</span>
+      <span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;$ &#39;</span>
+    <span class="k">fi</span>
+  <span class="k">fi</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -d /etc/profile.d <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="k">for</span> i <span class="k">in</span> /etc/profile.d/*.sh<span class="p">;</span> <span class="k">do</span>
+    <span class="k">if</span> <span class="o">[</span> -r <span class="nv">$i</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+      . <span class="nv">$i</span>
+    <span class="k">fi</span>
+  <span class="k">done</span>
+  <span class="nb">unset</span> i
+<span class="k">fi</span>
+:/etc $ 
+</code></pre></div>
+
+<p>다음에 설명할 기회가 있을지 모르겠지만, 위 예시에서 처음 등장하는 구문은,
+<code>/etc</code> 디렉토리에서 현재 디렉토리에 있는 <code>profile</code> 이라는 파일의 내용을 보자(<code>cat</code>)!라는 명령입니다.
+앞서 '미리 알면 좋을 것들'에서 설명한 것처럼, <code>cat</code> 명령에 대한 궁금한 점이 있으시면
+<code>$ man cat</code>으로 맨 페이지를 읽어 봅시다.</p>
+<p><code>/etc/profile</code> 파일의 내용을 보면, 가장 먼저 경로에 대한 변수를 정의하고 <code>$PATH</code>
+<code>/etc/bash.bashrc</code>라는 파일이 있으면 읽어 들이도록 하고 있습니다.
+이후 쉘 프롬프트를 정의 <code>PS1</code> 하는데, user id가 0, 즉 root user이면 <code>#</code>를
+아니라면, <code>$</code>를 부여하고, 마지막으로 <code>/etc/profiled.d</code>라는 디렉토리 아래에 있는 <code>*.sh</code>
+파일들을 읽어 들입니다.</p>
+<h3 id="user-initialization-files">사용자 설정 파일 user initialization files<a class="headerlink" href="#user-initialization-files" title="Permanent link">&para;</a></h3>
+<p>사용자 설정은 (당연히) 홈 디렉토리에 있습니다. 여기의 설정 파일들도 전역 설정과 비슷한 느낌이 있습니다.
+먼저 사용자가 로그인을 하게 되면, <code>~/.profile</code> 파일을 쉘이 읽게 됩니다.
+그리고 <code>~/.profile</code> 파일의 내부를 보면, 아래와 같습니다.</p>
+<div class="codehilite"><pre><span></span><code>$ cat ~/.profile
+<span class="c1"># ~/.profile: executed by the command interpreter for login shells.</span>
+<span class="c1"># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login</span>
+<span class="c1"># exists.</span>
+<span class="c1"># see /usr/share/doc/bash/examples/startup-files for examples.</span>
+<span class="c1"># the files are located in the bash-doc package.</span>
+
+<span class="c1"># the default umask is set in /etc/profile; for setting the umask</span>
+<span class="c1"># for ssh logins, install and configure the libpam-umask package.</span>
+<span class="c1">#umask 022</span>
+
+<span class="c1"># if running bash</span>
+<span class="k">if</span> <span class="o">[</span> -n <span class="s2">&quot;</span><span class="nv">$BASH_VERSION</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="c1"># include .bashrc if it exists</span>
+    <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.bashrc&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    . <span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.bashrc&quot;</span>
+    <span class="k">fi</span>
+<span class="k">fi</span>
+
+<span class="c1"># set PATH so it includes user&#39;s private bin if it exists</span>
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># set PATH so it includes user&#39;s private bin if it exists</span>
+<span class="k">if</span> <span class="o">[</span> -d <span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin&quot;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="k">fi</span>
+$ 
+</code></pre></div>
+
+<p><code>$ cat ~/.profile</code> 이라는 구문은, <code>cat</code> 명령으로 홈 디렉토리(<code>~</code>) 아래에 있는
+<code>.profile</code>이라는 파일을 화면에 출력하라! 라고 설명할 수 있겠습니다.</p>
+<p>내용을 보면, <code>~/.bashrc_profile</code> 혹은 <code>~/.bashrc_login</code> 파일이 있으면
+<code>~/.profile</code>은 무시된다는 설명과 함께, 사용자의 홈 디렉토리 아래에 <code>.bashrc</code> 파일이 있으면
+읽어 들이고, 경로 설정을 <code>$PATH</code>하고 끝나는 것을 알 수 있습니다.</p>
+<p>앞으로 Linux를 사용하면서 이런 사용자 쉘 초기화 파일을 자주 들여다 볼 일이 있을 것입니다.
+여기에 각자 취향에 맞는 설정을 집어 넣고, 새로운 환경에 맞는 설정을 하게 됩니다.</p>
+<p>전, <code>$PATH</code>에 이것저것 추가하는 것 이외에는 <code>set -o vi</code>라는 정의 한 줄을 추가합니다.
+<code>bash</code>나 <code>ksh</code>에서 (혹은 유사 계열에서) 쉘 환경에서 vi 편집기 명령어를 사용할 수 있게
+하는 것입니다. 전 vi 편집기를 많이 좋아합니다.</p>
+<h2 id="logout">logout 로그아웃<a class="headerlink" href="#logout" title="Permanent link">&para;</a></h2>
+<p>로그아웃을 하는 방법은 <code>$ exit</code>라고 명령을 내리는 것과 <code>$ logout</code>이라고 명령을 내리는 방법
+그리고 대부분의 터미널에서 지원하는 <code>^D</code>가 있습니다. <code>^D</code>는 키보드의 control 키와 d 키를 함께
+누르는 것을 말합니다. <code>^D</code>는 EOF를 standard input으로 받아들이게 되어서 해당 터미널이 닫히게 됩니다.</p>
+<p>그리고 <code>exit</code>와 <code>logout</code>은 따로 명령어가 존재하지 않습니다.
+쉘에서 입력을 받아서 처리합니다. <code>export</code>나 <code>set</code>과 성격이 같다고 볼 수 있습니다.
+그리고 이 두 명령이 비슷한 목적으로 존재하는 이유는 아래와 같습니다.</p>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">logout</span> --help
+logout: <span class="nb">logout</span> <span class="o">[</span>n<span class="o">]</span>
+    Exit a login shell.
+
+    Exits a login shell with <span class="nb">exit</span> status N.  Returns an error <span class="k">if</span> not executed
+    <span class="k">in</span> a login shell.
+$ <span class="nb">exit</span> --help
+exit: <span class="nb">exit</span> <span class="o">[</span>n<span class="o">]</span>
+    Exit the shell.
+
+    Exits the shell with a status of N.  If N is omitted, the <span class="nb">exit</span> status
+    is that of the last <span class="nb">command</span> executed.
+$ bash
+$ <span class="nb">logout</span>
+bash: logout: not login shell: use <span class="s1">&#39;exit&#39;</span>
+$ <span class="nb">exit</span>
+$ <span class="nb">exit</span>
+<span class="nb">logout</span>
+</code></pre></div>
+
+<h3 id="logout_1">logout<a class="headerlink" href="#logout_1" title="Permanent link">&para;</a></h3>
+<p><code>logout</code>은 로그인 쉘에서 일을 끝내고 나가는 것이다. <code>login</code>의 반대 개념입니다.
+위의 예시를 보면, 로그인 쉘에서 <code>bash</code>을 실행했습니다.
+이 때 실행한 <code>bash</code>는 로그인 쉘이 아니라 (같은 놈을 실한 한 것이지만 성격이) 다른
+쉘입니다. 이 때는 <code>logout</code>을 할 수 없습니다. 왜? <code>login</code>을 안 했으니까요.</p>
+<h3 id="exit">exit<a class="headerlink" href="#exit" title="Permanent link">&para;</a></h3>
+<p>빠져 나다는 것입니다. 쉘을 종료하는 것입니다. login shell 로그인 쉘은 사용자가 로그인하면서
+획득하는 쉘이고, 프로그래밍이나 다른 목적으로 쉘을 획득하거나 실행시킬 수 있습니다.
+그 쉘을 종료하는 선언입니다.</p>
+<p>그래서, 로그인 쉘에서는 <code>logout</code>대신 <code>exit</code>를 사용할 수도 있습니다. 어쨌든 종료이니까요.</p>
 <div class="footnote">
 <hr />
 <ol>
@@ -1182,7 +1420,7 @@ OS의 버전이나 패치 레벨을 알리는 것에 머물기도 했습니다.<
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-07T14:32:13+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-07</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-14T15:08:28+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-14</span>
     
   </small>
 </div>
