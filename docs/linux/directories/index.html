@@ -15,8 +15,8 @@
       
         <link rel="canonical" href="https://electronicnomad.net/pf/linux/directories/">
       
-      <link rel="shortcut icon" href="../../images/favicon-plumping-black.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.4">
+      <link rel="icon" href="../../images/favicon-plumping-black.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -83,11 +83,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-header__button md-logo" aria-label="Plumbers' Friday">
+    <a href="../.." title="Plumbers&#39; Friday" class="md-header__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
@@ -178,11 +176,9 @@
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday">
+    <a href="../.." title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
@@ -547,10 +543,43 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    경로
+  </a>
+  
+    <nav class="md-nav" aria-label="경로">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     상대경로와 절대경로
   </a>
+  
+    <nav class="md-nav" aria-label="상대경로와 절대경로">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    상대경로
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    절대경로
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -560,7 +589,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     관련 명령어들
   </a>
   
@@ -951,10 +980,43 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    경로
+  </a>
+  
+    <nav class="md-nav" aria-label="경로">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     상대경로와 절대경로
   </a>
+  
+    <nav class="md-nav" aria-label="상대경로와 절대경로">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    상대경로
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    절대경로
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -964,7 +1026,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     관련 명령어들
   </a>
   
@@ -1015,6 +1077,9 @@
                 
                 
                 <h1 id="_1">디렉토리<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>directory</p>
+</blockquote>
 <p>디렉토리라는 말이 어떤 사람에게는 어색한 시대가 되었습니다.
 디렉토리는 파일이 수록되는 논리적으로 구분된 공간입니다.
 디렉토리는 파일을 담고 있고, 다른 디렉토리를 담을 수 있습니다.
@@ -1023,7 +1088,7 @@
 <h2 id="_2">기본 사항<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">루트 디렉토리<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>최상위 디렉토리를 루트 디렉트로 root directory라고 부릅니다. 표기는 앞서 이야기 한 것과 같이
-/ 라고 적고, 슬래시 slash라고 읽습니다.</p>
+/ 라고 적고, slash '슬래시'라고 읽습니다.</p>
 <p>/ 는 디렉토리의 시작을 의미합니다.
 앞서 설명한 것과 같이 root directory는 / 로 표기되며
 root directory 아래에 위치하는 디렉토리는 /usr 과 같이 표기할 수 있습니다.
@@ -1050,8 +1115,9 @@ drwxr-xr-x <span class="m">1</span> root root <span class="m">512</span> Feb  <s
 $
 </code></pre></div>
 
-<p>/usr/local 디렉토리에서 <code>ls -al</code> 명령을 수행한 결과입니다.
-그 중 . 과 .. 이 보일 것입니다. 모든 디렉토리에서 . 와 .. 은 조회됩니다.</p>
+<p>/usr/local 디렉토리에서 <code>$ ls -al</code> 명령을 수행한 결과입니다.
+그 중 . 과 .. 이 보일 것입니다. 모든 디렉토리에서 . 와 .. 은 조회됩니다. 사용자가 위치하는 디렉토리를 변경하는 <code>cd</code> 명령을 사용하여 <code>$ cd ..</code>라고 명령하면 상위 디렉토리로 이동하고, <code>$ cd .</code>라고 명령하면 여전히 그 위치에 있게 됩니다.<br />
+/usr/local에서 <code>$ cd ..</code>라고 명령을 하면, /usr로 이동하게 되고, /usr/local에서 <code>$cd .</code>라고 명령을 하면 /usr/local로 가게 됩니다, 즉 그 자리에 있게 됩니다.</p>
 <h3 id="_5">홈 디렉토리<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>사용자의 공간을 home directory 홈 디렉토리 라고 합니다.
 변수로는 $HOME 이라고 정의합니다.
@@ -1070,14 +1136,12 @@ $
 <code>cd ~</code></li>
 </ol>
 <p>UNIX/Linux에서 <code>~</code>는 사용자의 홈 디렉토리를 뜻 합니다.</p>
-<h3 id="_6">상대경로와 절대경로<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>디렉토리의 위치에 접근하는 방식을 경로라고 하거나, 디렉토리의 위치 자체를 경로라고
-설명하는 사람도 있습니다. 실제 우리가 사용하는 '경로'라는 단어는 經路라는 것으로
-'지나는 길'이라는 뜻을 담고 있습니다.</p>
-<p>UNIX/Linux에는 <code>$PATH</code>라는 변수가 있고, <code>$PATH</code>는 디렉토리의 위치를 지시합니다.
-이 PATH를 번한문서에서는 '경로'라고 번역한 것으로 보입니다. 다음의 예제를 보겠습니다.</p>
+<h2 id="_6">경로<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>디렉토리의 위치에 접근하는 방식을 경로라고 하거나, 디렉토리의 위치 자체를 경로라고 설명하는 사람도 있습니다. 실제 우리가 사용하는 '경로'라는 단어는 經路라는 것으로 '지나는 길'이라는 뜻을 담고 있습니다. 뭔가 서로 맞지는 않지만, 언어라는 것이 널리 쓰이고 그렇게 굳어지면 자연스러운 것이 되는 법이죠.</p>
+<p>이 '경로'를 <code>$PATH</code>라는 변수로 정의됩니다, 그리고 <code>$PATH</code>는 디렉토리의 위치를 지시합니다. 그 위치는 어떤 명령이나 참조 정보(library 라이브러리)를 조회할 때 찾아야 하는 리렉토리 위치를 정의하는 것이라고 할 수 있습니다.</p>
+<p>예시를 먼저 보겠습니다.</p>
 <div class="codehilite"><pre><span></span><code>$ <span class="nb">pwd</span>
-/home/pi
+/home/user1
 $ ls -al ../../usr/local
 total <span class="m">40</span>
 drwxr-xr-x <span class="m">10</span> root root <span class="m">4096</span> Jan <span class="m">11</span> <span class="m">12</span>:50 .
@@ -1107,7 +1171,25 @@ drwxr-xr-x  <span class="m">2</span> root root <span class="m">4096</span> Jan <
 $
 </code></pre></div>
 
-<h2 id="_7">관련 명령어들<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><code>/home/user1</code>이라는 디렉토리에서 위엣것은 상대경로로 아랫것은 절대경로로 같은 디렉토리를 <code>ls -al</code> 명령으로 조회한 것입니다.
+이미 위 예시만으로 이해를 했다면 아래의 구구절절한 설명을 굳이 읽으실 필요는 없습니다. ;-)
+아니라면, 다음을 봅시다.</p>
+<h3 id="_7">상대경로와 절대경로<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="_8">상대경로<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>위 예시에서 <code>../../usr/local</code>이 상대경로입니다. 이 의미는 현재 디렉토리의 상위 그리고 상위 디렉토리 아래에 있는
+<code>usr</code> 아래에 있는 <code>local</code> 이라는 것을 지시하는 것입니다. 현재 디렉토리를 중심으로 상대적인 위치를 경로로 표시하는 것으로 '상대경로'라고 부릅니다. 이는 매우 유용합니다. 예를 들어 나의 절대적 위치를 알지 못 하더라도 
+내 현재 위치에서 바로 아래에 있는 어떤 디렉토리 혹은 내 현재 위치에서 상위 디렉토리에 있는 어떤 파일에 접근하는 것이 가능하기 때문입니다.
+어떤 프로그램을 작성하고 실행시킬 때 그 결과(output)을 현재 디렉토리 아래에 있는 <code>output</code>이라는 디렉토리에 저장할 수 있습니다.
+굳이 명령어 형식으로 표현한다면, <code>$ myApps -o ./output</code> 이렇게 되겠죠.</p>
+<h4 id="_9">절대경로<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>위 예시에서 <code>/usr/local</code>이 절대경로입니다. 절대경로는 절대적 위치를 말합니다.
+그 절대적 위치의 시작은 루트 디렉토리입니다. 그래서 항상 <code>/</code>로부터 시작됩니다.
+위 설명과 비슷하게 해 보자면, 어떤 프로그램을 작성하고 실행하실 때 그 프로그램의 작동기록 즉, 로그(log) 파일을
+항상, 달리 지정하지 않더라도, <code>/var/log/myApps.log</code>로 저장하고 싶다면 절대경로의 사용이 적절합니다.</p>
+<p>절대경로는 절대적 위치이기 때문에 항상 참일 것을 가정합니다. <code>/var/log</code>라는 디렉토리는 어떤 리눅스에나 있기 때문에 문제가 없습니다.
+대체로, 절대경로로 어떤 것을 지정하는 건 이와 같이 널리 알려져 있고, 어떤 시스템에서도 통용되거나, 그 절대적 위치가
+활용되는 시스템에서 해당 경로가 항상 존재한다는 '관리자'의 다짐(?)같은 것이 있다면 쓸모 있습니다.</p>
+<h2 id="_10">관련 명령어들<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <h3 id="cd-change-directory">cd - change directory<a class="headerlink" href="#cd-change-directory" title="Permanent link">&para;</a></h3>
 <p>명령어 중에, <code>cd</code>가 있습니다.
 디렉토리를 변경할 때 사용합니다. 용례는, <code>cd /var/log</code>와 같이
@@ -1193,6 +1275,7 @@ $
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -1228,7 +1311,7 @@ $
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.9b151c6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       

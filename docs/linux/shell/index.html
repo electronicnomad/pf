@@ -15,8 +15,8 @@
       
         <link rel="canonical" href="https://electronicnomad.net/pf/linux/shell/">
       
-      <link rel="shortcut icon" href="../../images/favicon-plumping-black.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.4">
+      <link rel="icon" href="../../images/favicon-plumping-black.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.77f3fd56.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
@@ -83,11 +83,9 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-header__button md-logo" aria-label="Plumbers' Friday">
+    <a href="../.." title="Plumbers&#39; Friday" class="md-header__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
@@ -178,11 +176,9 @@
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday">
+    <a href="../.." title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
@@ -896,8 +892,7 @@
 <blockquote>
 <p>shell</p>
 </blockquote>
-<p>쉘은 일종의 사용자 인터페이스입니다.
-사용자는 쉘을 통해서 운영체제와 대화를 하게 됩니다.</p>
+<p>쉘은 일종의 사용자 인터페이스이라고 생각합니다.</p>
 <p>우리가 사용하는 컴퓨터는 하드웨어가 있고, 그 위에 운영체제가 동작하는 구조입니다.
 운영체제에서 하드웨어에 가장 가까운 것이 kernel 커널이라는 존재가 있으며,
 그 상위에 devices 디바이스나 기타 library 라이브러리나 명령어들이 존재하게 됩니다.
@@ -907,14 +902,17 @@
 <p>Windows 시스템에서 Explorer.exe도 쉘입니다.<br />
 사람과 가장 가까이 있는 소프트웨어로 만들어진 컴퓨터 인터페이스가 쉘이라고 정의해도 대부분 틀리지 않습니다.</p>
 <h2 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h2>
-<p><code>bash</code>는 현재 가장 보편적인 UNIX/Linux 쉘입니다.<br />
-이에 대한 상세한 설명을 이곳이 하기 전에, 다음의 웹 문서가 좋은 참고 자료가 될 것입니다.
-<a href="http://www.pyrasis.com/book/DockerForTheReallyImpatient/Chapter04">http://www.pyrasis.com/book/DockerForTheReallyImpatient/Chapter04</a></p>
+<p><code>bash</code>는 '배쉬'라고 읽으며 현재 가장 보편적인 쉘입니다.<br />
+<code>bash</code>는 GNU에서 만들어낸 Unix-like 시스템을 위한 쉘입니다. <code>bash</code>는 'Bourne-Again SHell'이라는 이름을 가지고 있는데, Bourne Shell(<code>sh</code>)을 발전적으로 계승한다는 의미라고 해석할 수 있겠습니다.
+<code>sh</code>, Bourne Shell은 UNIX의 고향, Bell Lab의 Stephen Bourne이 개발했고, UNIX Version 7의 기본 쉘로 채택되었습니다.<br />
+<code>sh</code>은 1979년 세상에 소개되었습니다.<br />
+<code>bash</code>는 1989년에 첫 릴리즈가 되었습니다.</p>
+<p>그리고, <code>bash</code>에 대하여 깊이 있는 이해를 원한다면, <a href="https://www.gnu.org/software/bash/">공식 홈페이지</a>에 있는
+<a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a>을 정독해 보시길 권합니다.</p>
 <h2 id="_2">쉘 프로그래밍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Shell script 쉘 스크립트라는 것이 있습니다. 짧게, script 스크립트라고 말하기도 합니다.
-이 쉘 스크립트를 가운데에 놓고 마치 정교한 프로그램처럼 동작시키는 것을 그런 것을
-가능하게 하는 어떤 행위를 shell programming 쉘 프로그래밍이라고 부릅니다.</p>
-<p>쉘 프로그래밍에 대해서는 따로 구분된 글을 적고 싶은 마음도 있는데, 그 만큼 크고 넓습니다.</p>
+이 쉘 스크립트를 가운데에 놓고 마치 정교한 프로그램처럼 동작시키는 것을 가능하게 하는 어떤 행위를 shell programming 쉘 프로그래밍이라고 부릅니다.</p>
+<p>쉘 프로그래밍에 대해서는 따로 구분된 글을 적고 싶은 마음도 있는데, 그 만큼 크고 넓고 유용합니다.</p>
 <p>쉘은 스스로 프로그래밍 언어의 환경을 가지고 있습니다.
 변수가 있고, 정의가 가능합니다.
 하지만, 대부분은 UNIX/Linux 내에 있는 명령어들을 잘 나열하는 것으로 완성될 수도 있습니다.
@@ -990,6 +988,7 @@
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
   <div class="md-footer-social">
@@ -1025,7 +1024,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.9b151c6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
