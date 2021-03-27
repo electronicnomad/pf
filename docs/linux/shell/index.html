@@ -15,8 +15,8 @@
       
         <link rel="canonical" href="https://electronicnomad.net/pf/linux/shell/">
       
-      <link rel="icon" href="../../images/favicon-plumping-black.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+      <link rel="shortcut icon" href="../../images/favicon-plumping-black.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.8">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2c0c5eaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.cb6bc1d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.7fa14f5b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
         
           
           
@@ -41,7 +41,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,400i,700%7CNoto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Noto Sans KR";--md-code-font-family:"Noto Mono"}</style>
+        <style>body,input{font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Noto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -51,7 +51,7 @@
     
       
         
-<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-113185952-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-113185952-3","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview",document.location.pathname)})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
@@ -83,24 +83,26 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Plumbers&#39; Friday" class="md-header__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-header-nav__button md-logo" aria-label="Plumbers' Friday">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+    <label class="md-header-nav__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             Plumbers' Friday
           </span>
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
+        <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
               쉘
@@ -109,12 +111,9 @@
         </div>
       </div>
     </div>
-    <div class="md-header__options">
-      
-    </div>
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -123,10 +122,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -144,12 +143,12 @@
 </div>
     
     
-      <div class="md-header__source">
+      <div class="md-header-nav__source">
         
-<a href="https://github.com/electronicnomad/plumbers-friday/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/electronicnomad/plumbers-friday/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     electronicnomad/plumbers-friday
@@ -170,15 +169,17 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
+
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday" data-md-component="logo">
+    <a href="https://electronicnomad.net/pf/" title="Plumbers&#39; Friday" class="md-nav__button md-logo" aria-label="Plumbers' Friday">
       
   <img src="../../images/logo-plumping-white.png" alt="logo">
 
@@ -188,10 +189,10 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/electronicnomad/plumbers-friday/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/electronicnomad/plumbers-friday/" title="Go to repository" class="md-source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     electronicnomad/plumbers-friday
@@ -227,18 +228,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
       
-      <label class="md-nav__link" for="__nav_2">
+      <label class="md-nav__link" for="nav-2">
         Amazon Forecast
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Amazon Forecast" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
+        <label class="md-nav__title" for="nav-2">
           <span class="md-nav__icon md-icon"></span>
           Amazon Forecast
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -260,18 +262,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
       
-      <label class="md-nav__link" for="__nav_2_2">
+      <label class="md-nav__link" for="nav-2-2">
         Hands-on Labs
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Hands-on Labs" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
+        <label class="md-nav__title" for="nav-2-2">
           <span class="md-nav__icon md-icon"></span>
           Hands-on Labs
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -418,18 +421,19 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
       
-      <label class="md-nav__link" for="__nav_3">
+      <label class="md-nav__link" for="nav-3">
         Learning Linux
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Learning Linux" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="nav-3">
           <span class="md-nav__icon md-icon"></span>
           Learning Linux
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -437,7 +441,7 @@
   
     <li class="md-nav__item">
       <a href="../" class="md-nav__link">
-        시작 (기초공사중)
+        시작
       </a>
     </li>
   
@@ -500,7 +504,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#bash" class="md-nav__link">
@@ -513,6 +517,33 @@
   <a href="#_2" class="md-nav__link">
     쉘 프로그래밍
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-built-in-commnads" class="md-nav__link">
+    Shell built-in commnads
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell built-in commnads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alias-unalias" class="md-nav__link">
+    alias와 unalias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bg-fg" class="md-nav__link">
+    bg와 fg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -577,18 +608,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
       
-      <label class="md-nav__link" for="__nav_4">
+      <label class="md-nav__link" for="nav-4">
         AWS Networking
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="AWS Networking" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+        <label class="md-nav__title" for="nav-4">
           <span class="md-nav__icon md-icon"></span>
           AWS Networking
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -634,18 +666,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4" >
       
-      <label class="md-nav__link" for="__nav_4_4">
+      <label class="md-nav__link" for="nav-4-4">
         PrivateLink
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="PrivateLink" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_4">
+        <label class="md-nav__title" for="nav-4-4">
           <span class="md-nav__icon md-icon"></span>
           PrivateLink
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -685,18 +718,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" >
       
-      <label class="md-nav__link" for="__nav_4_5">
+      <label class="md-nav__link" for="nav-4-5">
         VPC Peering
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="VPC Peering" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_5">
+        <label class="md-nav__title" for="nav-4-5">
           <span class="md-nav__icon md-icon"></span>
           VPC Peering
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -736,18 +770,19 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" >
       
-      <label class="md-nav__link" for="__nav_4_6">
+      <label class="md-nav__link" for="nav-4-6">
         Transit Gateway
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Transit Gateway" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_6">
+        <label class="md-nav__title" for="nav-4-6">
           <span class="md-nav__icon md-icon"></span>
           Transit Gateway
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -841,7 +876,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -855,7 +890,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#bash" class="md-nav__link">
@@ -871,6 +906,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shell-built-in-commnads" class="md-nav__link">
+    Shell built-in commnads
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell built-in commnads">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alias-unalias" class="md-nav__link">
+    alias와 unalias
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bg-fg" class="md-nav__link">
+    bg와 fg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -879,7 +941,7 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
+          <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -892,14 +954,14 @@
 <blockquote>
 <p>shell</p>
 </blockquote>
-<p>쉘은 일종의 사용자 인터페이스이라고 생각합니다.</p>
+<p>쉘은 일종의 사용자 인터페이스이라고 말할 수 있습니다.</p>
 <p>우리가 사용하는 컴퓨터는 하드웨어가 있고, 그 위에 운영체제가 동작하는 구조입니다.
 운영체제에서 하드웨어에 가장 가까운 것이 kernel 커널이라는 존재가 있으며,
 그 상위에 devices 디바이스나 기타 library 라이브러리나 명령어들이 존재하게 됩니다.
 그리고 shell 쉘이 있는데, 이 쉘을 통해서 사람은 컴퓨터와 정보를 주고받게 됩니다.</p>
 <p>Linux에서는 현재 <code>bash</code>이 가장 보편적이며 <code>tcsh</code>과 <code>csh</code> 그리고 <code>zsh</code>도
-인기가 있는 것으로 알고 있습니다. </p>
-<p>Windows 시스템에서 Explorer.exe도 쉘입니다.<br />
+인기가 있는 것으로 알고 있습니다.</p>
+<p>Windows 시스템에서 explorer.exe도 cmd.exe도 쉘이라고 할 수 있습니다.
 사람과 가장 가까이 있는 소프트웨어로 만들어진 컴퓨터 인터페이스가 쉘이라고 정의해도 대부분 틀리지 않습니다.</p>
 <h2 id="bash">bash<a class="headerlink" href="#bash" title="Permanent link">&para;</a></h2>
 <p><code>bash</code>는 '배쉬'라고 읽으며 현재 가장 보편적인 쉘입니다.<br />
@@ -907,8 +969,7 @@
 <code>sh</code>, Bourne Shell은 UNIX의 고향, Bell Lab의 Stephen Bourne이 개발했고, UNIX Version 7의 기본 쉘로 채택되었습니다.<br />
 <code>sh</code>은 1979년 세상에 소개되었습니다.<br />
 <code>bash</code>는 1989년에 첫 릴리즈가 되었습니다.</p>
-<p>그리고, <code>bash</code>에 대하여 깊이 있는 이해를 원한다면, <a href="https://www.gnu.org/software/bash/">공식 홈페이지</a>에 있는
-<a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a>을 정독해 보시길 권합니다.</p>
+<p>그리고, <code>bash</code>에 대하여 깊이 있는 이해를 원한다면, <a href="https://www.gnu.org/software/bash/">공식 홈페이지</a>에 있는 <a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual</a>을 정독해 보시길 권합니다.</p>
 <h2 id="_2">쉘 프로그래밍<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>Shell script 쉘 스크립트라는 것이 있습니다. 짧게, script 스크립트라고 말하기도 합니다.
 이 쉘 스크립트를 가운데에 놓고 마치 정교한 프로그램처럼 동작시키는 것을 가능하게 하는 어떤 행위를 shell programming 쉘 프로그래밍이라고 부릅니다.</p>
@@ -918,7 +979,122 @@
 하지만, 대부분은 UNIX/Linux 내에 있는 명령어들을 잘 나열하는 것으로 완성될 수도 있습니다.
 리눅스 시스템 내에 존재하는 대부분의 제어 목적을 가진 명령어 수행은 쉘 스크립트로 작성되어 있습니다.</p>
 <p>다음의 웹 사이트가 기초적인 쉘 프그래밍/스크립트를 익히는데에 도움이 될 것입니다.
-<a href="https://www.learnshell.org/">https://www.learnshell.org/</a> </p>
+<a href="https://www.learnshell.org/">https://www.learnshell.org/</a></p>
+<h2 id="shell-built-in-commnads">Shell built-in commnads<a class="headerlink" href="#shell-built-in-commnads" title="Permanent link">&para;</a></h2>
+<p>관련 번역서 등에서는 '쉘 내장 명령어'라고 한국어로 표현하고 있습니다.
+내장은 內藏으로 적을 수 있고, 우리가 아는 동물의 몸 속에 있는 장기들을 뜻 합니다.
+그 의미의 확대에 따라서, 밖으로 드러나지 않게 안에 간직하다-라고도 쓰인다고 합니다.
+하지만, 뭔가 많이 어색하긴 합니다.</p>
+<p>아무튼, 각종 쉘들은 보통의 명령어들과 같은 수준의 명령을 스스로 지니고 있는데,
+해당 쉘에서 <code>$ help</code>라고 명령을 내리면 화면에 관련된 것들을 출력합니다.</p>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">help</span>
+GNU bash, version <span class="m">5</span>.0.3<span class="o">(</span><span class="m">1</span><span class="o">)</span>-release <span class="o">(</span>x86_64-pc-linux-gnu<span class="o">)</span>
+These shell commands are defined internally.  Type <span class="s1">&#39;help&#39;</span> to see this list.
+Type <span class="s1">&#39;help name&#39;</span> to find out more about the <span class="k">function</span> <span class="s1">&#39;name&#39;</span>.
+Use <span class="s1">&#39;info bash&#39;</span> to find out more about the shell <span class="k">in</span> general.
+Use <span class="s1">&#39;man -k&#39;</span> or <span class="s1">&#39;info&#39;</span> to find out more about commands not <span class="k">in</span> this list.
+
+A star <span class="o">(</span>*<span class="o">)</span> next to a name means that the <span class="nb">command</span> is disabled.
+
+ job_spec <span class="o">[</span><span class="p">&amp;</span><span class="o">]</span>                                                <span class="nb">history</span> <span class="o">[</span>-c<span class="o">]</span> <span class="o">[</span>-d offset<span class="o">]</span> <span class="o">[</span>n<span class="o">]</span> or <span class="nb">history</span> -anrw <span class="o">[</span>filename<span class="o">]</span>&gt;
+ <span class="o">((</span> expression <span class="o">))</span>                                            <span class="k">if</span> COMMANDS<span class="p">;</span> <span class="k">then</span> COMMANDS<span class="p">;</span> <span class="o">[</span> <span class="k">elif</span> COMMANDS<span class="p">;</span> <span class="k">then</span> COMMAN&gt;
+ . filename <span class="o">[</span>arguments<span class="o">]</span>                                      <span class="nb">jobs</span> <span class="o">[</span>-lnprs<span class="o">]</span> <span class="o">[</span>jobspec ...<span class="o">]</span> or <span class="nb">jobs</span> -x <span class="nb">command</span> <span class="o">[</span>args<span class="o">]</span>
+ :                                                           <span class="nb">kill</span> <span class="o">[</span>-s sigspec <span class="p">|</span> -n signum <span class="p">|</span> -sigspec<span class="o">]</span> pid <span class="p">|</span> jobspec .&gt;
+ <span class="o">[</span> arg... <span class="o">]</span>                                                  <span class="nb">let</span> arg <span class="o">[</span>arg ...<span class="o">]</span>
+ <span class="o">[[</span> expression <span class="o">]]</span>                                            <span class="nb">local</span> <span class="o">[</span>option<span class="o">]</span> name<span class="o">[=</span>value<span class="o">]</span> ...
+ <span class="nb">alias</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ... <span class="o">]</span>                              <span class="nb">logout</span> <span class="o">[</span>n<span class="o">]</span>
+ <span class="nb">bg</span> <span class="o">[</span>job_spec ...<span class="o">]</span>                                           mapfile <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-n count<span class="o">]</span> <span class="o">[</span>-O origin<span class="o">]</span> <span class="o">[</span>-s count<span class="o">]</span> <span class="o">[</span>-t&gt;
+ <span class="nb">bind</span> <span class="o">[</span>-lpsvPSVX<span class="o">]</span> <span class="o">[</span>-m keymap<span class="o">]</span> <span class="o">[</span>-f filename<span class="o">]</span> <span class="o">[</span>-q name<span class="o">]</span> <span class="o">[</span>-u &gt;  <span class="nb">popd</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>+N <span class="p">|</span> -N<span class="o">]</span>
+ <span class="nb">break</span> <span class="o">[</span>n<span class="o">]</span>                                                   <span class="nb">printf</span> <span class="o">[</span>-v var<span class="o">]</span> format <span class="o">[</span>arguments<span class="o">]</span>
+ <span class="nb">builtin</span> <span class="o">[</span>shell-builtin <span class="o">[</span>arg ...<span class="o">]]</span>                           <span class="nb">pushd</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>+N <span class="p">|</span> -N <span class="p">|</span> dir<span class="o">]</span>
+ <span class="nb">caller</span> <span class="o">[</span>expr<span class="o">]</span>                                               <span class="nb">pwd</span> <span class="o">[</span>-LP<span class="o">]</span>
+ <span class="k">case</span> WORD <span class="k">in</span> <span class="o">[</span>PATTERN <span class="o">[</span><span class="p">|</span> PATTERN<span class="o">]</span>...<span class="o">)</span> COMMANDS <span class="p">;;</span><span class="o">]</span>... esa&gt;  <span class="nb">read</span> <span class="o">[</span>-ers<span class="o">]</span> <span class="o">[</span>-a array<span class="o">]</span> <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-i text<span class="o">]</span> <span class="o">[</span>-n nchars<span class="o">]</span> &gt;
+ <span class="nb">cd</span> <span class="o">[</span>-L<span class="p">|</span><span class="o">[</span>-P <span class="o">[</span>-e<span class="o">]]</span> <span class="o">[</span>-@<span class="o">]]</span> <span class="o">[</span>dir<span class="o">]</span>                                readarray <span class="o">[</span>-d delim<span class="o">]</span> <span class="o">[</span>-n count<span class="o">]</span> <span class="o">[</span>-O origin<span class="o">]</span> <span class="o">[</span>-s count<span class="o">]</span> <span class="o">[</span>&gt;
+ <span class="nb">command</span> <span class="o">[</span>-pVv<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span>arg ...<span class="o">]</span>                            <span class="nb">readonly</span> <span class="o">[</span>-aAf<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ...<span class="o">]</span> or <span class="nb">readonly</span> -p
+ <span class="nb">compgen</span> <span class="o">[</span>-abcdefgjksuv<span class="o">]</span> <span class="o">[</span>-o option<span class="o">]</span> <span class="o">[</span>-A action<span class="o">]</span> <span class="o">[</span>-G globp&gt;  <span class="k">return</span> <span class="o">[</span>n<span class="o">]</span>
+ <span class="nb">complete</span> <span class="o">[</span>-abcdefgjksuv<span class="o">]</span> <span class="o">[</span>-pr<span class="o">]</span> <span class="o">[</span>-DEI<span class="o">]</span> <span class="o">[</span>-o option<span class="o">]</span> <span class="o">[</span>-A act&gt;  <span class="k">select</span> NAME <span class="o">[</span><span class="k">in</span> WORDS ... <span class="p">;</span><span class="o">]</span> <span class="k">do</span> COMMANDS<span class="p">;</span> <span class="k">done</span>
+ compopt <span class="o">[</span>-o<span class="p">|</span>+o option<span class="o">]</span> <span class="o">[</span>-DEI<span class="o">]</span> <span class="o">[</span>name ...<span class="o">]</span>                    <span class="nb">set</span> <span class="o">[</span>-abefhkmnptuvxBCHP<span class="o">]</span> <span class="o">[</span>-o option-name<span class="o">]</span> <span class="o">[</span>--<span class="o">]</span> <span class="o">[</span>arg ...<span class="o">]</span>
+ <span class="k">continue</span> <span class="o">[</span>n<span class="o">]</span>                                                <span class="nb">shift</span> <span class="o">[</span>n<span class="o">]</span>
+ coproc <span class="o">[</span>NAME<span class="o">]</span> <span class="nb">command</span> <span class="o">[</span>redirections<span class="o">]</span>                        <span class="nb">shopt</span> <span class="o">[</span>-pqsu<span class="o">]</span> <span class="o">[</span>-o<span class="o">]</span> <span class="o">[</span>optname ...<span class="o">]</span>
+ <span class="nb">declare</span> <span class="o">[</span>-aAfFgilnrtux<span class="o">]</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ...<span class="o">]</span>             <span class="nb">source</span> filename <span class="o">[</span>arguments<span class="o">]</span>
+ <span class="nb">dirs</span> <span class="o">[</span>-clpv<span class="o">]</span> <span class="o">[</span>+N<span class="o">]</span> <span class="o">[</span>-N<span class="o">]</span>                                      <span class="nb">suspend</span> <span class="o">[</span>-f<span class="o">]</span>
+ <span class="nb">disown</span> <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>-ar<span class="o">]</span> <span class="o">[</span>jobspec ... <span class="p">|</span> pid ...<span class="o">]</span>                   <span class="nb">test</span> <span class="o">[</span>expr<span class="o">]</span>
+ <span class="nb">echo</span> <span class="o">[</span>-neE<span class="o">]</span> <span class="o">[</span>arg ...<span class="o">]</span>                                       <span class="nb">time</span> <span class="o">[</span>-p<span class="o">]</span> pipeline
+ <span class="nb">enable</span> <span class="o">[</span>-a<span class="o">]</span> <span class="o">[</span>-dnps<span class="o">]</span> <span class="o">[</span>-f filename<span class="o">]</span> <span class="o">[</span>name ...<span class="o">]</span>                <span class="nb">times</span>
+ <span class="nb">eval</span> <span class="o">[</span>arg ...<span class="o">]</span>                                              <span class="nb">trap</span> <span class="o">[</span>-lp<span class="o">]</span> <span class="o">[[</span>arg<span class="o">]</span> signal_spec ...<span class="o">]</span>
+ <span class="nb">exec</span> <span class="o">[</span>-cl<span class="o">]</span> <span class="o">[</span>-a name<span class="o">]</span> <span class="o">[</span><span class="nb">command</span> <span class="o">[</span>arguments ...<span class="o">]]</span> <span class="o">[</span>redirecti&gt;  <span class="nb">true</span>
+ <span class="nb">exit</span> <span class="o">[</span>n<span class="o">]</span>                                                    <span class="nb">type</span> <span class="o">[</span>-afptP<span class="o">]</span> name <span class="o">[</span>name ...<span class="o">]</span>
+ <span class="nb">export</span> <span class="o">[</span>-fn<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ...<span class="o">]</span> or <span class="nb">export</span> -p                <span class="nb">typeset</span> <span class="o">[</span>-aAfFgilnrtux<span class="o">]</span> <span class="o">[</span>-p<span class="o">]</span> name<span class="o">[=</span>value<span class="o">]</span> ...
+ <span class="nb">false</span>                                                       <span class="nb">ulimit</span> <span class="o">[</span>-SHabcdefiklmnpqrstuvxPT<span class="o">]</span> <span class="o">[</span>limit<span class="o">]</span>
+ <span class="nb">fc</span> <span class="o">[</span>-e ename<span class="o">]</span> <span class="o">[</span>-lnr<span class="o">]</span> <span class="o">[</span>first<span class="o">]</span> <span class="o">[</span>last<span class="o">]</span> or <span class="nb">fc</span> -s <span class="o">[</span><span class="nv">pat</span><span class="o">=</span>rep<span class="o">]</span> <span class="o">[</span>c&gt;  <span class="nb">umask</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>-S<span class="o">]</span> <span class="o">[</span>mode<span class="o">]</span>
+ <span class="nb">fg</span> <span class="o">[</span>job_spec<span class="o">]</span>                                               <span class="nb">unalias</span> <span class="o">[</span>-a<span class="o">]</span> name <span class="o">[</span>name ...<span class="o">]</span>
+ <span class="k">for</span> NAME <span class="o">[</span><span class="k">in</span> WORDS ... <span class="o">]</span> <span class="p">;</span> <span class="k">do</span> COMMANDS<span class="p">;</span> <span class="k">done</span>                <span class="nb">unset</span> <span class="o">[</span>-f<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span> <span class="o">[</span>-n<span class="o">]</span> <span class="o">[</span>name ...<span class="o">]</span>
+ <span class="k">for</span> <span class="o">((</span> exp1<span class="p">;</span> exp2<span class="p">;</span> exp3 <span class="o">))</span><span class="p">;</span> <span class="k">do</span> COMMANDS<span class="p">;</span> <span class="k">done</span>               <span class="k">until</span> COMMANDS<span class="p">;</span> <span class="k">do</span> COMMANDS<span class="p">;</span> <span class="k">done</span>
+ <span class="k">function</span> name <span class="o">{</span> COMMANDS <span class="p">;</span> <span class="o">}</span> or name <span class="o">()</span> <span class="o">{</span> COMMANDS <span class="p">;</span> <span class="o">}</span>      variables - Names and meanings of some shell variables
+ <span class="nb">getopts</span> optstring name <span class="o">[</span>arg<span class="o">]</span>                                <span class="nb">wait</span> <span class="o">[</span>-fn<span class="o">]</span> <span class="o">[</span>id ...<span class="o">]</span>
+ <span class="nb">hash</span> <span class="o">[</span>-lr<span class="o">]</span> <span class="o">[</span>-p pathname<span class="o">]</span> <span class="o">[</span>-dt<span class="o">]</span> <span class="o">[</span>name ...<span class="o">]</span>                   <span class="k">while</span> COMMANDS<span class="p">;</span> <span class="k">do</span> COMMANDS<span class="p">;</span> <span class="k">done</span>
+ <span class="nb">help</span> <span class="o">[</span>-dms<span class="o">]</span> <span class="o">[</span>pattern ...<span class="o">]</span>                                   <span class="o">{</span> COMMANDS <span class="p">;</span> <span class="o">}</span>
+$
+</code></pre></div>
+
+<p>위에서 설명된 각 명령들 중에 아래의 것들은 매일 필요한 것이기에, 각 명령에 <code>--help</code>를 붙혀 용법을 익히는 것이 좋습니다. 예를 들면,</p>
+<div class="codehilite"><pre><span></span><code>$ <span class="nb">alias</span> --help
+alias: <span class="nb">alias</span> <span class="o">[</span>-p<span class="o">]</span> <span class="o">[</span>name<span class="o">[=</span>value<span class="o">]</span> ... <span class="o">]</span>
+    Define or display aliases.
+
+    Without arguments, <span class="s1">&#39;alias&#39;</span> prints the list of aliases <span class="k">in</span> the reusable
+    form <span class="s1">&#39;alias NAME=VALUE&#39;</span> on standard output.
+
+    Otherwise, an <span class="nb">alias</span> is defined <span class="k">for</span> each NAME whose VALUE is given.
+    A trailing space <span class="k">in</span> VALUE causes the next word to be checked <span class="k">for</span>
+    <span class="nb">alias</span> substitution when the <span class="nb">alias</span> is expanded.
+
+    Options:
+      -p        print all defined aliases <span class="k">in</span> a reusable format
+
+    Exit Status:
+    <span class="nb">alias</span> returns <span class="nb">true</span> unless a NAME is supplied <span class="k">for</span> which no <span class="nb">alias</span> has been
+    defined.
+</code></pre></div>
+
+<p>처럼 말이죠 :-) 그럼, 먼저 익혀두면 좋을 것들을 아래에 나열해 보겠습니다. 몇몇은 다른 챕터에서 이미 다룬 것도 있습니다.</p>
+<div class="codehilite"><pre><span></span><code>alias, unalias, bg, fg, history, jobs, logout, pwd, cd, set, unset, echo, exit, <span class="k">for</span>, <span class="k">while</span>, kill, time, true, umask, ulimit, <span class="k">until</span>, <span class="k">while</span>,
+</code></pre></div>
+
+<p>이 중 몇가지에 대하여 아래에 설명을 하겠습니다.</p>
+<h3 id="alias-unalias">alias와 unalias<a class="headerlink" href="#alias-unalias" title="Permanent link">&para;</a></h3>
+<p><code>alias</code>는 단어 뜻 그대로 별칭을 지정하는 것입니다. 이는 매우 유용한데, 명령과 그것에 따르는 옵션을 하나로 묶어서 사용자 스스로 정의하는 새로운 명령으로 사용하거나 기존의 명령을 대체할 수 있습니다.</p>
+<p><code>$ alias ls='ls -al'</code><br />
+위 명령은 <code>ls</code>라는 명령어를 실행하면 <code>ls -al</code>와 같이 수행되는 것을 의미합니다. 기존의 <code>/bin/ls</code>를 수행하기 전에 <code>alias</code>로 정의된 것을 먼저 수행하기 때문에 사용자는 <code>ls</code> 명령어를 실행하면 <code>ls -al</code>을 실행한 것과 같은 수행결과를 얻게 됩니다, 아래처럼 말이죠.</p>
+<div class="codehilite"><pre><span></span><code>jhin@home:~$ <span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -al&#39;</span>
+jhin@home:~$ ls
+total <span class="m">36</span>
+drwxr-xr-x <span class="m">1</span> jhin jhin   <span class="m">512</span> Mar <span class="m">11</span> <span class="m">15</span>:41 .
+drwxr-xr-x <span class="m">1</span> root root   <span class="m">512</span> Feb <span class="m">15</span> <span class="m">01</span>:12 ..
+-rw------- <span class="m">1</span> jhin jhin <span class="m">25852</span> Mar <span class="m">22</span> <span class="m">12</span>:55 .bash_history
+-rw-r--r-- <span class="m">1</span> jhin jhin   <span class="m">220</span> Feb <span class="m">15</span> <span class="m">01</span>:12 .bash_logout
+-rw-r--r-- <span class="m">1</span> jhin jhin  <span class="m">3526</span> Feb <span class="m">15</span> <span class="m">01</span>:12 .bashrc
+drwxr-xr-x <span class="m">1</span> jhin jhin   <span class="m">512</span> Feb <span class="m">15</span> <span class="m">02</span>:32 .bundle
+drwxr-xr-x <span class="m">1</span> jhin jhin   <span class="m">512</span> Feb <span class="m">16</span> <span class="m">23</span>:16 .cache
+drwxr-x--x <span class="m">1</span> jhin jhin   <span class="m">512</span> Mar  <span class="m">6</span> <span class="m">21</span>:24 .config
+drwxr-xr-x <span class="m">1</span> jhin jhin   <span class="m">512</span> Feb <span class="m">15</span> <span class="m">02</span>:16 .gem
+drwxr-xr-x <span class="m">1</span> jhin jhin   <span class="m">512</span> Mar <span class="m">16</span> <span class="m">10</span>:01 .gems
+lrwxrwxrwx <span class="m">1</span> jhin jhin    <span class="m">29</span> Feb <span class="m">15</span> <span class="m">01</span>:56 git -&gt; /mnt/d/data/Documents/GitHub/
+-rw-r--r-- <span class="m">1</span> jhin jhin    <span class="m">68</span> Feb <span class="m">25</span> <span class="m">02</span>:00 .gitconfig
+drwx------ <span class="m">1</span> jhin jhin   <span class="m">512</span> Feb <span class="m">25</span> <span class="m">02</span>:04 .local
+-rw-r--r-- <span class="m">1</span> jhin jhin  <span class="m">1017</span> Mar  <span class="m">6</span> <span class="m">21</span>:28 .profile
+drwx------ <span class="m">1</span> jhin jhin   <span class="m">512</span> Feb <span class="m">27</span> <span class="m">06</span>:21 .ssh
+jhin@home:~$ <span class="nb">unalias</span> ls
+jhin@home:~$ ls
+git
+jhin@home:~$
+</code></pre></div>
+
+<p>위 예시에서, <code>unalias</code>라는 명령이 쓰였습니다. 이는 <code>alias</code>로 정의한 것을 해제한다는 의미입니다.</p>
+<h3 id="bg-fg">bg와 fg<a class="headerlink" href="#bg-fg" title="Permanent link">&para;</a></h3>
+<p><code>bg</code>는 background의 약자입니다. 실행시키는 프로그램이나 명령을 background로 동작시키는 것입니다.
+그리고, <code>fg</code>는 foreground의 약자입니다. 지정하는 background로 동작 중인 프로그램이나 명령을 foreground로 전환하는 명령입니다.</p>
+<p>한국어로는, 혹은 전산용어로는, background를 배경(背景) 그리고 foreground를 전경(前景)이라고 사용하고 있습니다. 대부분의 번한한 전상용어들이 어색하듯 이 또한 익숙해지기가 쉽지 않습니다.</p>
                 
                   
                     
@@ -927,7 +1103,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-16T16:06:05+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-16</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-26T16:46:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-26</span>
     
   </small>
 </div>
@@ -947,38 +1123,40 @@
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        <a href="../login-and-logout/" class="md-footer__link md-footer__link--prev" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              로그인과 로그아웃
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../login-and-logout/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
-          </div>
-        </a>
-      
-      
-        <a href="../directories/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              디렉토리
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                로그인과 로그아웃
+              </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
+          </a>
+        
+        
+          <a href="../directories/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                디렉토리
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -988,7 +1166,6 @@
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
-        
       </div>
       
   <div class="md-footer-social">
@@ -1018,13 +1195,19 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-    
-      <script src="../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      <script src="../../assets/javascripts/vendor.18f0862e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.994580cf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.9c0e82ba.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
       
         <script src="../../js/timeago.min.js"></script>
       
