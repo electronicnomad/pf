@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://electronicnomad.net/pf/linux/file-and-permissions/">
       
       <link rel="icon" href="../../images/favicon-plumping-black.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -513,6 +513,7 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
         
       
       
@@ -527,6 +528,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -652,6 +654,19 @@
   <a href="#chmod" class="md-nav__link">
     chmod
   </a>
+  
+    <nav class="md-nav" aria-label="chmod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    참조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -956,6 +971,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -1080,6 +1096,19 @@
     chmod
   </a>
   
+    <nav class="md-nav" aria-label="chmod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    참조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1140,7 +1169,7 @@ $
 </code></pre></div>
 
 <p>첫번째는 <code>-</code> 하나의 비트입니다. 이는 <code>-</code>과 <code>d</code> 둘 중 하나로 표현되는데, <code>-</code>는 파일, <code>d</code>는 디렉토리라는 의미입니다.</p>
-<p>두번째는 <code>---</code> 세개의 비트입니다. 이 세 자리에는 차례대로 <code>r</code>, <code>w</code>, <code>x</code>,가 올 수 있습니다. 이는 서로 조합이 되는데, <code>rwx</code>, <code>rw-</code>, <code>r--</code>, <code>-w-</code>, <code>--x</code>, <code>-wx</code> 등 표현이 가능합니다. <code>r</code>은 read, <code>w</code>는 write, <code>x</code>는 excute입니다. </p>
+<p>두번째는 <code>---</code> 세개의 비트입니다. 이 세 자리에는 차례대로 <code>r</code>, <code>w</code>, <code>x</code>,가 올 수 있습니다. 이는 서로 조합이 되는데, <code>rwx</code>, <code>rw-</code>, <code>r--</code>, <code>-w-</code>, <code>--x</code>, <code>-wx</code> 등 표현이 가능합니다. <code>r</code>은 read, <code>w</code>는 write, <code>x</code>는 execute입니다.</p>
 <p>세번째와 네번째는 두번째와 동일한 표현 형식을 따릅니다. (물론 예외적인 상황도 있습니다. s나 T로 표현되는 경우도 있는데, 이에 대한 설명은 따로 하겠습니다)</p>
 <p>기본적으로 리눅스에서는 이렇게 rwx로 파일에 대한 접근 권한을 정의하고 실행 가능하다는 정의도 내리게 됩니다. 그런데, 위 설명에 따르면 같은 정의를 세 차례 반복하는 느낌입니다. 이에 대한 설명을 바로 아래에서 하겠습니다.</p>
 <h3 id="owner-group-other">owner, group, other<a class="headerlink" href="#owner-group-other" title="Permanent link">&para;</a></h3>
@@ -1194,20 +1223,106 @@ $
 <p>w, 즉 쓰기(write)에 대한 권한은 해당 파일을 편집할 수 있는 권한과 지울 수 있는 권한을 같이 가져 갑니다.</p>
 <h4 id="_8">디렉토리에 대하여<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <p>w, 즉 쓰기(write) 관한은 디렉토리 아래에서는 새로운 파일을 생성할 수 있는 권한을 의미합니다.
-x, 즉 실행(excute) 권한은 디렉토리에 접근할 권한을 의미합니다. 즉, x가 표기되지 않은 곳으로는 들어가 볼 수가 없습니다.</p>
+x, 즉 실행(execute) 권한은 디렉토리에 접근할 권한을 의미합니다. 즉, x가 표기되지 않은 곳으로는 들어가 볼 수가 없습니다.</p>
 <h2 id="_9">권한 설정<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <h3 id="chown">chown<a class="headerlink" href="#chown" title="Permanent link">&para;</a></h3>
-<p><code>chown</code>은 소유권자를 변경하는 것입니다. change ownership.</p>
+<p><code>chown</code>은 지정하는 대상의 소유자를 변경하는 것입니다. change ownership.</p>
+<div class="codehilite"><pre><span></span><code>$ ls -al ./test.sh
+-rwxr-xr-x <span class="m">1</span> jhin jhin <span class="m">111</span> Apr <span class="m">23</span> <span class="m">20</span>:24 ./test.sh
+$
+</code></pre></div>
+
+<p>위 예시는 현재 디렉토리에 있는, <code>test.sh</code>이라는 파일을 <code>ls -al</code> 명령으로 조회한 것입니다.
+여기에서 3번째에 해당되는 것이 소유자, owner에 대한 표시입니다. <code>test.sh</code>이라는 파일은
+<code>jhin</code>이라는 사용자가 소유하고 있는 것이죠.</p>
+<p>이 소유자를 변경할 수 있는 명령이 <code>chown</code>입니다. 다음과 같이 사용할 수 있습니다.</p>
+<div class="codehilite"><pre><span></span><code>$ sudo chown nobody ./test.sh
+<span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> jhin:
+$ ls -al ./test.sh
+-rwxr-xr-x <span class="m">1</span> nobody jhin <span class="m">111</span> Apr <span class="m">23</span> <span class="m">20</span>:24 ./test.sh
+$
+</code></pre></div>
+
+<p><code>sudo</code>라는 명령으로 root 권한을 일시적으로 확득합니다. <code>sudo</code>는 그런 역할을 하는 용도가 단순하고 아주
+강력한 명령입니다. 그 뒤에 따르는 명령, <code>chown nobody ./test.sh</code>은 <code>nobody</code>라는 사용자로 <code>./</code> 현재
+디렉토리에 위치하고 있는 <code>test.sh</code>이라는 파일의 소유권을 변경하라. 라는 뜻입니다.</p>
+<p><code>sudo</code>라는 root 권한을 획득하는 과정이 필요한 이유는, 단순합니다. 당신의 소유물을 타인에게 권리를 양도하는 것
+또한, 타인의 허락이 필요하기 때문입니다. 당신이 임의로 할 수 없다는 것이죠. 이건 현실 세계와 다르지 않습니다.
+그래서, 이것을 강제할 수 있는 초월적 권한이 필요한 것입니다.</p>
+<p><code>chown</code>은 소유자를 변경할 때, 그룹도 변경할 수 있습니다. <code>chown --help</code>라고 하면
+조회할 수 있는 도움말의 첫 번째 행을 보면... <code>chown [OPTION]... [OWNER][:[GROUP]] FILE...</code>와 같이 되어 있습니다.<br />
+<code>$ chown nobody:sys ./test.sh</code>과 같은 명령을 하게 되면, 현재 디렉토리에 있는 test.sh이라는 파일의
+소유자를 nobody로 변경함과 동시에 그룹을 sys로 변경하는 것입니다.<br />
+그룹 변경에 대한 더 상세한 내용은 아래에서 다루겠습니다.</p>
 <h3 id="chgrp">chgrp<a class="headerlink" href="#chgrp" title="Permanent link">&para;</a></h3>
-<p><code>chgrp</code>는 그룹을 변경하는 것입니다. change group.</p>
+<p><code>chgrp</code>는 지정하는 대상의 그룹을 변경하는 것입니다. change group.</p>
+<p><code>chgrp</code>는 <code>chgrp [OPTION]... GROUP FILE...</code>와 같은 문법으로 사용하게 됩니다.<br />
+<code>chgrp</code>는 <code>chown</code>과 달리, 반드시 root 사용자의 권한을 필요로 하지 않습니다.
+다만, 번경하려는 그룹은 그 명령을 내리는 사용자도 속해 있어야 합니다.</p>
+<p><code>id</code>라는 명령을 내려보면, 해당 사용자가 속한 그룹을 쉽게 찾아 볼 수 있습니다. 혹은
+<code>/etc/group</code> 파일을 열어 보아도 됩니다.</p>
+<div class="codehilite"><pre><span></span><code>ubuntu@node0:~$ id
+<span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span>,4<span class="o">(</span>adm<span class="o">)</span>,20<span class="o">(</span>dialout<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,115<span class="o">(</span>netdev<span class="o">)</span>,118<span class="o">(</span>lxd<span class="o">)</span>,998<span class="o">(</span>microk8s<span class="o">)</span>
+ubuntu@node0:~$ 
+</code></pre></div>
+
+<p>아래는 <code>chgrp</code>를 활요하여 그룹을 변경하는 예시입니다.</p>
+<div class="codehilite"><pre><span></span><code>ubuntu@node0:~/workspace/test$ ls -al
+total <span class="m">8</span>
+drwxrwxr-x <span class="m">2</span> ubuntu ubuntu <span class="m">4096</span> Apr <span class="m">24</span> <span class="m">16</span>:42 .
+drwxrwxr-x <span class="m">4</span> ubuntu ubuntu <span class="m">4096</span> Apr <span class="m">24</span> <span class="m">16</span>:42 ..
+-rw-rw-r-- <span class="m">1</span> ubuntu ubuntu    <span class="m">0</span> Apr <span class="m">24</span> <span class="m">16</span>:42 test.file
+ubuntu@node0:~/workspace/test$ id
+<span class="nv">uid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span> <span class="nv">gid</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span> <span class="nv">groups</span><span class="o">=</span><span class="m">1000</span><span class="o">(</span>ubuntu<span class="o">)</span>,4<span class="o">(</span>adm<span class="o">)</span>,20<span class="o">(</span>dialout<span class="o">)</span>,24<span class="o">(</span>cdrom<span class="o">)</span>,25<span class="o">(</span>floppy<span class="o">)</span>,27<span class="o">(</span>sudo<span class="o">)</span>,29<span class="o">(</span>audio<span class="o">)</span>,30<span class="o">(</span>dip<span class="o">)</span>,44<span class="o">(</span>video<span class="o">)</span>,46<span class="o">(</span>plugdev<span class="o">)</span>,115<span class="o">(</span>netdev<span class="o">)</span>,118<span class="o">(</span>lxd<span class="o">)</span>,998<span class="o">(</span>microk8s<span class="o">)</span>
+ubuntu@node0:~/workspace/test$ chgrp cdrom ./test.file 
+ubuntu@node0:~/workspace/test$ ls -al
+total <span class="m">8</span>
+drwxrwxr-x <span class="m">2</span> ubuntu ubuntu <span class="m">4096</span> Apr <span class="m">24</span> <span class="m">16</span>:42 .
+drwxrwxr-x <span class="m">4</span> ubuntu ubuntu <span class="m">4096</span> Apr <span class="m">24</span> <span class="m">16</span>:42 ..
+-rw-rw-r-- <span class="m">1</span> ubuntu cdrom     <span class="m">0</span> Apr <span class="m">24</span> <span class="m">16</span>:42 test.file
+ubuntu@node0:~/workspace/test$ chgrp sys ./test.file 
+chgrp: changing group of <span class="s1">&#39;./test.file&#39;</span>: Operation not permitted
+ubuntu@node0:~/workspace/test$ sudo chgrp sys ./test.file 
+ubuntu@node0:~/workspace/test$ ls -al ./test.file 
+-rw-rw-r-- <span class="m">1</span> ubuntu sys <span class="m">0</span> Apr <span class="m">24</span> <span class="m">16</span>:42 ./test.file
+ubuntu@node0:~/workspace/test$ 
+</code></pre></div>
+
+<p>위 예시에서 앞서 설명한 것과 같이, 사용자가 속한 그룹, <code>cdrom</code>으로는 자유롭게 변경이 가능했지만,
+속하지 않은 그룹, <code>sys</code>로 변경할 때는 <code>sudo</code> 명령을 통한 root 사용자의 권한이 필요했습니다.</p>
 <h3 id="chmod">chmod<a class="headerlink" href="#chmod" title="Permanent link">&para;</a></h3>
-<p><code>chmod</code>는 권한 설정을 변경하는 것입니다. change mode.</p>
+<p><code>chmod</code>는 파일이나 디렉토리이 모드를 변경하는 것입니다. change mode.</p>
+<p>모드의 변경은, 해당 파일이나 디렉토리에 대한 '읽기', '쓰기', '실행'에 대한 허용여부와
+그 허용을 '사용자', '그룹', '모든 사용자'로 범위를 설정하는 것을 포함합니다.
+이 바탕은 위에서 설명한 것과 같습니다.</p>
+<div class="codehilite"><pre><span></span><code>ubuntu@node1:~/test$ ls -al ./test.file
+-rw-r--r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod a-rwx ./test.file
+ubuntu@node1:~/test$ ls -al ./test.file 
+---------- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod u+rw,g+r,o+r ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file
+-rw-r--r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod g+w ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file 
+-rw-rw-r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+</code></pre></div>
+
+<p>위 예시는 <code>chmod</code>를 통해서 파일의 권한을 변경해 본 것입니다.
+최초의 파일 상태는, <code>-rw-r--r--</code>였습니다.
+즉, 사용자는 '읽기'와 '쓰기', 그룹은 '읽기', 그 외에는 '읽기'가 가능한 상태였습니다.</p>
+<p>이 상태에서 <code>chmod a-rwx</code>를 통해, 모든 권한을 제거하였습니다. 그 뒤에 다시 원상태로 돌렸습니다.
+예시에서 유추해 볼 수 있는 것과 같이, a(ll)는 사용자 그룹 그 외를 모두 한 번에 설정할 수 있으며,
+u(ser)는 사용자를, g(roup)는 그룹을 뜻 합니다.
+여기에 +와 -를 사용해서 r(ead), w(rite), (e)x(ecute)의 권한을 추가하거나 제거할 수 있는 직관적은 방식입니다.</p>
+<p>이렇게, 기호를 통한 모드의 변경도 가능하지만, 수를 통해서도 가능합니다.
+익숙해지면, 아래의 방식을 더 많이 사용하게 될 것입니다. 일단, 아래의 도표를 살펴보겠습니다.</p>
 <table>
 <thead>
 <tr>
-<th>표시</th>
-<th>이진 Bin</th>
-<th>십진 Dec</th>
+<th>기호표시</th>
+<th>이진표시 Binary</th>
+<th>팔진표시 Octal</th>
 <th>설명</th>
 </tr>
 </thead>
@@ -1262,6 +1377,38 @@ x, 즉 실행(excute) 권한은 디렉토리에 접근할 권한을 의미합니
 </tr>
 </tbody>
 </table>
+<p>rwx의 표기를 이진법으로 치환하여 생각하면 위 표의 두 번째 열처럼 됩니다.
+이를 팔진법으로 표기하면 세 번째 열이 됩니다. 이것을 user group other로 엮어 나타내면 아래와 같습니다.</p>
+<div class="codehilite"><pre><span></span><code>-rw-r--r-- <span class="o">=</span> <span class="m">0644</span>
+-rwxr-xr-x <span class="o">=</span> <span class="m">0755</span>
+</code></pre></div>
+
+<p>위에 인용한 예시를 수를 이용한 모드 변경으로 아래와 같이 동일한 결과를 얻을 수 있습니다.</p>
+<div class="codehilite"><pre><span></span><code>ubuntu@node1:~/test$ ls -al ./test.file 
+-rw-rw-r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod <span class="m">0000</span> ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file 
+---------- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod <span class="m">0644</span> ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file 
+-rw-r--r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod <span class="m">000</span> ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file 
+---------- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ chmod <span class="m">644</span> ./test.file 
+ubuntu@node1:~/test$ ls -al ./test.file 
+-rw-r--r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
+ubuntu@node1:~/test$ 
+</code></pre></div>
+
+<p>각 비트에 대응하는 자릿수는 4자리이기 때문에 형식상 0644 0755 등이 맞지만,
+첫번째 비트는 특별한 정의가 없으면, 0으로 간주되기 때문에 3자리만 정의해서 사용할 수 있습니다.</p>
+<h4 id="_10">참조<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p><code>chmod</code>에 대한 상세하고 친절한 설명은,
+<a href="https://en.wikipedia.org/wiki/File-system_permissions">위키피디아 - File system permissions</a>를 참조하면 좋겠습니다.
+위 링크에 있는 문서를 읽다보면, setuid와 setguid 그리고 sticky bit에 대한 설명도 관심있게 읽어 보시길 바랍니다.
+그리고 <code>umask</code>라는 부분이 실재 파일의 모드와 직접적인 관련이 있는데, 이 또한
+<a href="https://en.wikipedia.org/wiki/Umask">위키피디아 - umask</a>를 찾아보길 추천합니다.</p>
                 
                   
                     
@@ -1270,7 +1417,7 @@ x, 즉 실행(excute) 권한은 디렉토리에 접근할 권한을 의미합니
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-17T13:03:09+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-17</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-25T04:19:32+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-25</span>
     
   </small>
 </div>
@@ -1368,7 +1515,7 @@ x, 즉 실행(excute) 권한은 디렉토리에 접근할 권한을 의미합니
     <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
