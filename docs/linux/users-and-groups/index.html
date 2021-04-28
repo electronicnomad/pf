@@ -887,6 +887,12 @@
 먼저 여기에서는 사용자와 그룹에 대한 기본적인 내용을 설명하겠습니다.</p>
 <h2 id="etcpasswd">/etc/passwd<a class="headerlink" href="#etcpasswd" title="Permanent link">&para;</a></h2>
 <p>사용자에 대한 개별 설정은 <code>/etc/passwd</code>에 모두 담겨 있습니다. <code>/etc/passwd</code>를 열어 보겠습니다.</p>
+<div class="codehilite"><pre><span></span><code>ubuntu@node0:~$ cat /etc/passwd <span class="p">|</span>grep <span class="nv">$USER</span>
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+ubuntu@node0:~$ 
+</code></pre></div>
+
+<p>위 예시는 /etc/passwd 파일에서 </p>
                 
                   
                     
@@ -895,7 +901,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-03-02T22:18:33+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-03-02</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-28T21:49:54+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-28</span>
     
   </small>
 </div>
