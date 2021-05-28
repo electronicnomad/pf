@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://electronicnomad.net/pf/linux/file-and-permissions/">
       
       <link rel="icon" href="../../images/favicon-plumping-black.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.5">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bde7dde4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -542,10 +542,10 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    확장자라는 개념은 버리자
+    확장자라는 개념
   </a>
   
-    <nav class="md-nav" aria-label="확장자라는 개념은 버리자">
+    <nav class="md-nav" aria-label="확장자라는 개념">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -983,10 +983,10 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    확장자라는 개념은 버리자
+    확장자라는 개념
   </a>
   
-    <nav class="md-nav" aria-label="확장자라는 개념은 버리자">
+    <nav class="md-nav" aria-label="확장자라는 개념">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1134,8 +1134,9 @@
                 
                 
                 <h1 id="_1">파일과 권한<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>파일은 이유없이 디렉토리와 묶어야 될 것 같지만, 따지자면 디렉토리도 시스템에서는 파일과 별반 다를 것이 없기에 '파일과 권한'을 묶어 하나의 챕터를 만들었습니다.</p>
-<h2 id="_2">확장자라는 개념은 버리자<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>파일은 이유없이 디렉토리와 묶어야 될 것 같지만, 따지자면 디렉토리도 시스템에서는 파일과 별반 다를 것이 없기에
+'파일과 권한 (file and permissions)'을 묶어 하나의 챕터를 만들었습니다.</p>
+<h2 id="_2">확장자라는 개념<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>확장자라는 개념은 DOS 시절에 매우 중요했고, 여전히 개인 컴퓨팅 환경에서는 이것이 중요한 구분자가 됩니다.
 확장자라는 것은 점(.)으로 구분되는 앞과 뒤에 이름 중에 뒤의 이름을 정형화 하여 그 파일의 성격을 규정하는 것입니다.</p>
 <h3 id="_3">도스와 윈도<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
@@ -1378,11 +1379,30 @@ u(ser)는 사용자를, g(roup)는 그룹을 뜻 합니다.
 </tbody>
 </table>
 <p>rwx의 표기를 이진법으로 치환하여 생각하면 위 표의 두 번째 열처럼 됩니다.
-이를 팔진법으로 표기하면 세 번째 열이 됩니다. 이것을 user group other로 엮어 나타내면 아래와 같습니다.</p>
-<div class="codehilite"><pre><span></span><code>-rw-r--r-- <span class="o">=</span> <span class="m">0644</span>
--rwxr-xr-x <span class="o">=</span> <span class="m">0755</span>
-</code></pre></div>
-
+이를 팔진법으로 표기하면 세 번째 열이 됩니다. 이것을 user + group + other로 엮어 사용하게 됩니다.</p>
+<p>흔희 사용하게 되는 경우는 다음의 몇 가지 정도입니다.</p>
+<table>
+<thead>
+<tr>
+<th>기호표시</th>
+<th>팔진표시 Octal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-rw-r--r--</td>
+<td>0644</td>
+</tr>
+<tr>
+<td>-rw-------</td>
+<td>0600</td>
+</tr>
+<tr>
+<td>-rwxr-xr-x</td>
+<td>0755</td>
+</tr>
+</tbody>
+</table>
 <p>위에 인용한 예시를 수를 이용한 모드 변경으로 아래와 같이 동일한 결과를 얻을 수 있습니다.</p>
 <div class="codehilite"><pre><span></span><code>ubuntu@node1:~/test$ ls -al ./test.file 
 -rw-rw-r-- <span class="m">1</span> ubuntu ubuntu <span class="m">0</span> Apr <span class="m">24</span> <span class="m">18</span>:51 ./test.file
@@ -1417,7 +1437,8 @@ ubuntu@node1:~/test$
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-04-28T21:49:54+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-04-28</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-05-20T20:41:53+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-05-20</span>
+      
     
   </small>
 </div>
@@ -1512,10 +1533,10 @@ ubuntu@node1:~/test$
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a1609d9a.min.js"></script>
       
         <script src="../../js/timeago.min.js"></script>
       
