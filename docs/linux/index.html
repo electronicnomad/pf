@@ -602,6 +602,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="package-management/" class="md-nav__link">
+        패키지 관리
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -972,42 +984,37 @@
                 
                 
                 <h1 id="_1">리눅스를 배워 봅시다<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>부끄럽게도 리눅스를 배웁시다 - 라는 문서를 작성하고
-공개하려는 결심을 하였습니다. 생업에 약간의 여유라도 생기면
-시간을 내어서 키보드를 두드리고 있습니다. 완성은 <strong>가까운 미래가 아닐 것</strong> 같지만,
-매주 조금씩 조금씩 나아지기 위해 노력하고 있습니다.</p>
+<p>잘 알지도 못 하는데, 전문가도 아닌데 이런 걸 시작했습니다.
+일하면서 돈벌어 먹고 살면서 알게 된 것들을 나열해 보겠습니다.
+누군가에게는 도움이 되지 않을까요?</p>
 <h2 id="_2">방향<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>여기 수록되는 문서는 처음 리눅스를 접하는 분들께 하나의 길라잡이 역할을 하려 작성되었습니다.
-다른 리눅스 문서 프로젝트와는 조금 다른 방향을 가지고 있습니다.
-그래서 깊이 있는 이해와 폭넓은 응용은 다루어지지 않을 수도 있습니다.</p>
+<p>리눅스라는 운영체제에 이제 막 진입하는 사람들을 위하여 만들고 있습니다.</p>
 <h3 id="_3">기준<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>(아직까지는) 기준이 되는 배포판은 Debian 계열이 될 것입니다.
+<p>모든 설명에 기준이 되는 배포판은 Debian 계열이 될 것입니다.
 Ubuntu에서 수행한 결과를 예제로 삼을 수도 있고,
 Debian을 언급할 수도 있고, Raspberry Pi OS를
-혹은, WSL(Windows Subsystem for Linux)에 대한 이야기가 있을 수도 있습니다.<br />
+혹은, WSL(Windows Subsystem for Linux)에 대한 이야기가 있을 수도 있습니다.
 Debian 계열을 기준으로 잡는 이유는 매우 간단합니다. 지금 이 글을 적고 있는
-사람이 이것에 익숙하기 때문입니다. 다른 예를 추가해 주시거나 차이점을 설명해 줄 수 있는
+사람이 이것에 익숙하기 때문입니다. 다른 예를 추가 되거나, 차이점을 설명해 줄 수 있는
 기회가 있기를 바랍니다.</p>
 <h3 id="_4">구성<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>아래의 목차는 구성안(構成案)입니다. 그저 안(案)이어서 언제든 변경될 수 있습니다.</p>
-<ul>
-<li>login and logout 로그인과 로그아웃</li>
-<li>shell 쉘</li>
-<li>directory 디렉토리</li>
-<li>file and permissions 파일과 권한</li>
-<li>users and groups 사용자와 그룹<ul>
-<li>password and shadow</li>
-<li>root user 관리자 계정</li>
-</ul>
-</li>
-<li>/var/log 로그 파일들</li>
-<li>daemon and services 데몬과 서비스</li>
-<li>hardware information 하드웨어 정보 조회</li>
-<li>networking 네트워크</li>
-<li>storage 스토리지</li>
-<li>booting process 부팅 과정</li>
-<li>performance monitoring 성능 모니터링</li>
-<li>kernel 커널</li>
+<p>아래의 목차는 구성안(構成案)입니다.<br />
+그저 안(案)이어서 언제든 변경될 수 있습니다.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> login and logout 로그인과 로그아웃</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> shell 쉘</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> directory 디렉토리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> file and permissions 파일과 권한</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> users and groups 사용자와 그룹</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> package management 패키지 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> /var/log/* 로그 파일들</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> daemon and services 데몬과 서비스</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> hardware information 하드웨어 정보 조회</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> networking 네트워크</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> storage 스토리지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> booting process 부팅 과정</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> performance monitoring 성능 모니터링</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> kernel 커널</li>
 </ul>
 <h2 id="_5">기타<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <h3 id="_6">읽기를 권하는 문서들<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
@@ -1028,7 +1035,7 @@ Debian 계열을 기준으로 잡는 이유는 매우 간단합니다. 지금 �
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-05-26T13:01:02+09:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-05-26</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2021-06-02T16:44:18+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2021-06-02</span>
       
     
   </small>
